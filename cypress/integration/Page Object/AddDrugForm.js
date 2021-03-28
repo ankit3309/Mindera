@@ -1,4 +1,4 @@
-class addForm
+class addDrugForm
 {
     drugBankID(ID)
     {
@@ -249,5 +249,34 @@ class addForm
             .click()
     }
 
+    DrugAddedAssertion()
+    {
+        cy.get('skin-atlas')
+            .shadow()
+            .find('.wrapper')
+            .find('#main')
+            .find('private-component')
+            .find('drug-view')
+            .shadow()
+            .find('.main-content')
+            .find('drug-table')
+            .shadow()
+            .find('.table-wrapper')
+            .eq('0')
+            .find('md-table')
+            .shadow()
+            .find('table')
+            .find('tr')
+            .eq('1')
+            .find('td')
+            .eq('2')
+            .find('cell-renderer')
+            .shadow()
+            .find('span')
+            .contains('Advil')
+
+
+    }
+
 }
-export default addForm
+export default addDrugForm
