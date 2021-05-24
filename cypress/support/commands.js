@@ -13,6 +13,10 @@
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
 // import "cypress-localstorage-commands";
+import 'cypress-wait-until';
+
+import 'cypress-file-upload';
+
 import "cypress-localstorage-commands"
 let LOCAL_STORAGE_MEMORY = {};
 
@@ -27,6 +31,7 @@ Cypress.Commands.add("restoreLocalStorageCache", () => {
     localStorage.setItem(key, LOCAL_STORAGE_MEMORY[key]);
   });
 });
+
 
 //
 //

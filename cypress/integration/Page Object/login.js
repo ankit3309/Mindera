@@ -17,7 +17,10 @@ class LoginPage
             .shadow()            
             .find('min-input')
             .shadow()            
-            .find('.form-group__input-control[type="text"]').type(email)
+            .find('.form-group__input-control[type="text"]')
+            .should('be.visible')
+            .and('be.enabled')
+            .type(email)
     }
 
     Password(password)
@@ -31,7 +34,10 @@ class LoginPage
             .shadow()
             .find('[type="password"]')
             .shadow()
-            .find('.form-group__input-control[type="password"]').type(password)
+            .find('.form-group__input-control[type="password"]')
+            .should('be.visible')
+            .and('be.enabled')
+            .type(password)
         
 
     }
@@ -50,6 +56,24 @@ class LoginPage
             .find('.md-button[role="button"]')
             .click()
 
+    }
+
+    LoginAssertion()
+    {
+        
+        cy.get('skin-atlas')
+            .shadow()
+            .find('.wrapper')
+            .find('#main')
+            .find('private-component')
+            .find('dashboard-view')
+            .shadow()
+            .find('nav-bar')
+            .shadow()
+            .find('.navbar-wrapper')
+            .find('.nav-bar-title')
+            .should('be.visible')
+            .contains('Dashboard')
     }
 
 }
