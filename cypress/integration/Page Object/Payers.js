@@ -90,6 +90,7 @@ class Payers
             .find('.form-group__control-wrap')
             .find('.form-group__input-control[type="text"]')
             .eq('0')
+            .wait(2000)
             .type(Name)
     }
 
@@ -704,87 +705,10 @@ class Payers
             .find('.dropdown')
             .eq('0')
             .click()
-            .wait(2000)
-
-        //select Edit icon for payer input field    
-        cy.get('skin-atlas')
-            .shadow()
-            .find('.wrapper')
-            .find('#main')
-            .find('private-component')
-            .find('payer-details')
-            .shadow()
-            .find('.main-content')
-            .find('payer-details-view')
-            .shadow()
-            .find('.form-wrapper')
-            .find('min-auto-complete')
-            .find('iron-icon')
-            .eq('1')
-            .click()
-        
-        // drop down for payer tier
-        cy.get('skin-atlas')
-            .shadow()
-            .find('.wrapper')
-            .find('#main')
-            .find('private-component')
-            .find('payer-details')
-            .shadow()
-            .find('.main-content')
-            .find('add-payer-dialog')
-            .shadow()
-            .find('md-dialog')
-            .find('.form-wrapper')
-            .find('min-auto-complete')
-            .shadow()
-            .find('#autocomplete-wrapper')
-            .find('#input')
-            .click()
-
-        // Select Payer tier from drop down list    
-        cy.get('skin-atlas')
-            .shadow()
-            .find('.wrapper')
-            .find('#main')
-            .find('private-component')
-            .find('payer-details')
-            .shadow()
-            .find('.main-content')
-            .find('add-payer-dialog')
-            .shadow()
-            .find('md-dialog')
-            .find('.form-wrapper')
-            .find('min-auto-complete')
-            .shadow()
-            .find('#autocomplete-wrapper')
-            .find('iron-dropdown')
-            .find('mwc-list')
-            .find('mwc-list-item')
-            .eq('1')
-            .click()
-        
-        //Click update button
-        cy.get('skin-atlas')
-            .shadow()
-            .find('.wrapper')
-            .find('#main')
-            .find('private-component')
-            .find('payer-details')
-            .shadow()
-            .find('.main-content')
-            .find('add-payer-dialog')
-            .shadow()
-            .find('md-dialog')
-            .shadow()
-            .find('paper-dialog')
-            .find('.buttons-wrapper')
-            .find('md-button')
-            .shadow()
-            .find('.md-button[role="button"]')
-            .eq('1')
-            .click()
-
+            .wait(2000) 
+      
+                  
+       
         //Select drop down for state field
         cy.get('skin-atlas')
             .shadow()
@@ -868,11 +792,11 @@ class Payers
             .find('tr')
             .eq('1')
             .find('td')
-            .eq('5')
+            .eq('8')
             .find('cell-renderer')
             .shadow()
             .find('span')
-            .contains('2')
+            .contains('AL')
     }
 
     FilterPayer()
@@ -933,7 +857,7 @@ class Payers
             .find('.select-control-wrap')
             .find('.editable-input-container')
             .find('#input')
-            .type('United Healthcare')
+            .type('Chicago Payer')
             .wait(2000)
 
          //Select Payer from drop down
@@ -1287,7 +1211,7 @@ class Payers
             .find('.select-control-wrap')
             .find('.editable-input-container')
             .find('#input')
-            .type('Johns Hopkins Healthcare')
+            .type('Chicago Hospital')
             .wait(2000)
 
          //Select Plan from drop down
@@ -1405,7 +1329,7 @@ class Payers
             .find('.select-control-wrap')
             .find('.editable-input-container')
             .find('#input')
-            .type('AK')
+            .type('AL')
             .wait(2000)
 
          //Select Plan from drop down
@@ -1509,7 +1433,7 @@ class Payers
             .find('.content')
             .eq('1')
             .find('colored-tag')
-            .contains('Advil')
+            .contains('Drug')
 
         //Asserting Targets
         cy.get('skin-atlas')
@@ -1532,7 +1456,7 @@ class Payers
             .find('.content')
             .eq('2')
             .find('colored-tag')
-            .contains('IL12B')
+            .contains('Target(s)')
 
         //Asserting Plan
         cy.get('skin-atlas')
@@ -1555,7 +1479,7 @@ class Payers
             .find('.content')
             .eq('3')
             .find('colored-tag')
-            .contains('Johns Hopkins Healthcare')
+            .contains('Plan')
 
         //Asserting State
         cy.get('skin-atlas')
@@ -1578,7 +1502,7 @@ class Payers
             .find('.content')
             .eq('4')
             .find('colored-tag')
-            .contains('AK')
+            .contains('State')
 
 
     }

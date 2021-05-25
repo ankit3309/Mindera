@@ -75,7 +75,7 @@ class Informatics
         //     .eq('0')
         //     .wait(2000)
         //     .find('g')
-            
+        //     .eq('1')
         //     .find('rect')
         //     .eq('0')
         //     .click()
@@ -572,6 +572,7 @@ class Informatics
             .find('mwc-list')
             .find('mwc-list-item')
             .eq('0')
+            .wait(2000)
             .click({forcce:true})
 
         

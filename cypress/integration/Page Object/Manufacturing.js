@@ -218,7 +218,7 @@ class Manufacture
             .find('.select-control-wrap')
             .find('.editable-input-container')
             .find('#input')
-            .click()
+            .type('Dr. David M. Pariser SITE 206')
 
         //Select Customer name from dropdown list
         cy.get('skin-atlas')
@@ -248,7 +248,8 @@ class Manufacture
             .find('iron-dropdown')
             .find('mwc-list')
             .find('mwc-list-item')
-            .eq('4')
+            .eq('0')
+            .wait(2000)
             .click()
         
         //Click apply button

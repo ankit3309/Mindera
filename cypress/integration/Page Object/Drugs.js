@@ -985,7 +985,7 @@ class Drugs
             .shadow()
             .find('.mdc-ripple-upgraded--unbounded')
             .find('.material-icons')
-            .click()
+            .click({force:true})
 
         cy.get('skin-atlas')
             .shadow()
@@ -1006,7 +1006,7 @@ class Drugs
             .find('mwc-list')
             .find('.dropdown')
             .eq('1')
-            .click()
+            .click({force:true})
 
         cy.get('skin-atlas')
             .shadow()
@@ -1025,7 +1025,7 @@ class Drugs
             .find('.ml-2x')
             .shadow()
             .find('.md-button')
-            .click()
+            .click({force:true})
             
     }
 
